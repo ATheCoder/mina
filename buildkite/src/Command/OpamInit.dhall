@@ -44,5 +44,6 @@ in
     , S.strictly (S.contains "Makefile")
     , S.exactly "buildkite/src/Command/OpamInit" "dhall"
     , S.exactly "buildkite/scripts/cache-through" "sh"
+    , S.everything
     ]
 }

@@ -31,8 +31,12 @@ if [[ "$OSTYPE" == "darwin*" ]]; then
 fi
 
 # create local switch
+echo "CREATE LOCAL SWITCH"
 opam switch create . --repos o1-labs=git+https://github.com/o1-labs/opam-repository.git,default ocaml-variants.4.07.1+logoom
+echo "CREATED LOCAL SWITCH"
+echo "IMPORT OPAM EXPORT"
 opam switch import src/opam.export --switch .
+echo "IMPORTED OPAM EXPORT"
 sudo chmod -R u+rw _opam
 eval $(opam config env)
 
