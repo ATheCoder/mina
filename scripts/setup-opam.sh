@@ -30,6 +30,9 @@ if [[ "$OSTYPE" == "darwin*" ]]; then
   export  LIBRARY_PATH=/usr/local/lib
 fi
 
+# comment/uncomment to regenerate
+# echo "REGENERATE CI OPAM TARBALL"
+
 # create local switch
 echo "CREATE LOCAL SWITCH"
 opam switch create . --repos o1-labs=git+https://github.com/o1-labs/opam-repository.git,default ocaml-variants.4.07.1+logoom
